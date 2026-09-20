@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Appraiser Study Learning Record",
+  "description": "회계학의 한 학습 단위를 원본자료, AI 학습노트, 질문·답변, 이해도, 약점, 복습과 연결하는 표준 기록",
+  "type": "object",
+  "required": ["record_id", "subject", "learning_unit", "study_session", "source_material", "ai_note", "qa", "assessment", "review", "status"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "subject": {"const": "회계학"},
+    "learning_unit": {
+      "type": "object",
+      "required": ["major_unit", "minor_unit"],
+      "properties": {
+        "major_unit": {"type": "string"},
+        "minor_unit": {"type": "string"}
+      }
+    },
+    "study_session": {
+      "type": "object",
+      "required": ["study_date"],
+      "properties": {
+        "study_date": {"type": "string", "format": "date"},
+        "start_time": {"type": ["string", "null"]},
+        "end_time": {"type": ["string", "null"]},
+        "duration_minutes": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "source_material": {
+      "type": "object",
+      "required": ["material_id", "path"],
+      "properties": {
+        "material_id": {"type": "string"},
+        "path": {"type": "string"},
+        "title": {"type": ["string", "null"]},
+        "type": {"type": ["string", "null"]},
+        "version": {"type": ["string", "null"]}
+      }
+    },
+    "ai_note": {
+      "type": "object",
+      "properties": {
+        "core_concepts": {"type": "array", "items": {"type": "string"}},
+        "principles_and_why": {"type": "array", "items": {"type": "string"}},
+        "examples": {"type": "array", "items": {"type": "string"}},
+        "exam_points": {"type": "array", "items": {"type": "string"}},
+        "memory_points": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "qa": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "question", "answer_summary"],
+        "properties": {
+          "question_id": {"type": "string"},
+          "question": {"type": "string"},
+          "answer_summary": {"type": "string"},
+          "understanding": {"type": ["integer", "null"], "minimum": 0, "maximum": 5},
+          "weakness": {"type": "boolean"},
+          "weakness_tags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "properties": {
+        "mastery": {"type": ["integer", "null"], "minimum": 0, "maximum": 100},
+        "weakness_level": {"type": ["integer", "null"], "minimum": 0, "maximum": 5},
+        "wrong_answer_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "initial_review_date": {"type": ["string", "null"], "format": "date"},
+        "next_review_date": {"type": ["string", "null"], "format": "date"},
+        "interval_days": {"type": ["integer", "null"], "minimum": 0},
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["review_date", "result"],
+            "properties": {
+              "review_date": {"type": "string", "format": "date"},
+              "result": {"type": "string", "enum": ["pass", "partial", "fail"]},
+              "understanding": {"type": ["integer", "null"], "minimum": 0, "maximum": 5}
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["not_started", "in_progress", "completed"]
+    }
+  }
+}
