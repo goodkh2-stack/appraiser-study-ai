@@ -1,0 +1,41 @@
+{
+  "record_id": "ACC-재무회계-유형자산-SAMPLE-001",
+  "subject": "회계학",
+  "learning_unit": {
+    "major_unit": "재무회계",
+    "minor_unit": "유형자산"
+  },
+  "study_session": {
+    "study_date": null,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": null
+  },
+  "source_material": {
+    "material_id": null,
+    "path": null,
+    "title": "해커스 감정평가사 회계학",
+    "type": "text_or_pdf",
+    "version": null
+  },
+  "ai_note": {
+    "core_concepts": [],
+    "principles_and_why": [],
+    "examples": [],
+    "exam_points": [],
+    "memory_points": []
+  },
+  "qa": [],
+  "assessment": {
+    "mastery": null,
+    "weakness_level": null,
+    "wrong_answer_count": 0
+  },
+  "review": {
+    "initial_review_date": null,
+    "next_review_date": null,
+    "interval_days": null,
+    "history": []
+  },
+  "status": "not_started"
+}
