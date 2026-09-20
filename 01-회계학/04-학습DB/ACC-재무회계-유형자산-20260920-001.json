@@ -1,0 +1,52 @@
+{
+  "record_id": "ACC-재무회계-유형자산-20260920-001",
+  "subject": "회계학",
+  "learning_unit": {
+    "major_unit": "재무회계",
+    "minor_unit": "유형자산"
+  },
+  "study_session": {
+    "study_date": "2026-09-20",
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": null
+  },
+  "source_material": {
+    "material_id": null,
+    "path": null,
+    "title": "해커스 감정평가사 회계학",
+    "type": "text_or_pdf",
+    "version": null
+  },
+  "ai_note": {
+    "core_concepts": [
+      "감가상각은 유형자산의 취득원가를 사용기간에 걸쳐 비용으로 배분하는 것",
+      "내용연수·잔존가치 등의 변경은 새로운 정보에 따른 회계추정의 변경",
+      "회계추정의 변경은 전진적으로 적용"
+    ],
+    "principles_and_why": [
+      "추정 변경은 새로운 정보에 따른 것이므로 변경 전 과거 금액을 다시 수정하지 않고 변경시점부터 미래에 반영한다."
+    ],
+    "examples": [],
+    "exam_points": [
+      "회계정책의 변경·회계추정의 변경·오류수정을 구별",
+      "회계추정 변경 시 과거 감가상각비를 다시 계산하지 않음"
+    ],
+    "memory_points": [
+      "추정 변경 → 변경시점 장부금액 → 미래에 전진 적용"
+    ]
+  },
+  "qa": [],
+  "assessment": {
+    "mastery": null,
+    "weakness_level": null,
+    "wrong_answer_count": 0
+  },
+  "review": {
+    "initial_review_date": "2026-09-21",
+    "next_review_date": "2026-09-21",
+    "interval_days": 1,
+    "history": []
+  },
+  "status": "studied"
+}
